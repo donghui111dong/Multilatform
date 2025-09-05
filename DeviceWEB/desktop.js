@@ -1,6 +1,6 @@
 // 后端服务器
 // loadlang();
-const server = 'http://win12server.freehk.svipss.top/';
+const server = '';
 const pages = {
     'get-title': '', // 获取标题
 };
@@ -491,15 +491,14 @@ function hidedescp(e) {
 // 提示
 let nts = {
     'about': {
-        cnt: `<p class="tit">Windows 12 网页版</p>
-            <p>Windows 12 网页版是一个开放源项目,<br />
-            希望让用户在网络上预先体验 Windows 12,<br />
-            内容可能与 Windows 12 正式版本不一致。<br />
+        cnt: `<p class="tit">管理中心网页版</p>
+            <p>管理中心网页版是一个开很好的项目<br />
+            希望让客户在网络上体验Windows般的丝滑。<br />
+            内容与 Windows 12 正式版本不一致。<br />
             使用标准网络技术,例如 HTML, CSS 和 JS<br />
             此项目绝不附属于微软,且不应与微软操作系统或产品混淆,<br />
-            这也不是 Windows365 cloud PC<br />
             本项目中微软、Windows和其他示范产品是微软公司的商标<br />
-            本项目中谷歌、Android和其他示范产品是谷歌公司的商标</p>`,
+            </p>`,
         btn: [
             { type: 'main', text: '关闭', js: 'closenotice();' },
             { type: 'detail', text: '更多', js: "closenotice();openapp('about');if($('.window.about').hasClass('min'))minwin('about');$('.dock.about').removeClass('show')" },
@@ -509,8 +508,8 @@ let nts = {
         cnt: `<p class="tit">反馈</p>
             <p>我们非常注重用户的体验与反馈</p>
             <list class="new">
-                <a class="a" onclick="window.open('https://github.com/tjy-gitnub/win12/issues','_blank');" win12_title="在浏览器新窗口打开链接" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)">在github上提交issue(需要github账户，会得到更高重视)</a>
-                <a class="a" onclick="window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__SDw7SZURjUzOUo0VEVXU1pMWlFTSUVGWDNYWU1EWS4u','_blank');" win12_title="在浏览器新窗口打开链接" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)">在Microsoft Forms上发送反馈(不需要账户，也会重视)</a>
+                <a class="a" onclick="" win12_title="在浏览器新窗口打开链接" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)"></a>
+                <a class="a" onclick="" win12_title="在浏览器新窗口打开链接" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)">发送反馈(不需要账户，也会重视)</a>
             </list>`,
         btn: [
             { type: 'main', text: '关闭', js: 'closenotice();' },
@@ -581,23 +580,14 @@ let nts = {
     },
     'about-copilot': {
         cnt: `
-            <p class="tit">关于 Windows 12 Copilot</p>
-            <p>你可以使用此 AI 助手帮助你更快地完成工作 (有人用Win12工作?)<br>
-            由于所用模型理解力较差，所以间歇性正常工作。<br>
-            有任何关于本 AI 的反馈请让 AI 帮你打开 AI Copilot反馈界面<br>
-            每日只有100,000条请求机会！每月只有1G的流量限制，请各位合理安排使用次数（<br>
-            也请适当使用，不要谈论敏感、违规话题，<br>请有身为一个人类最基本的道德底线。<br>
-            小项目难免会有bug，见谅，后端由 github@NB-Group 提供</p>`,
+            <p></p>`,
         btn: [
             { type: 'main', text: '确定', js: 'closenotice();' },
         ]
     },
     'feedback-copilot': {
-        cnt: `<p class="tit">反馈 Windows 12 Copilot</p>
-        <p>我们非常注重用户的体验与反馈，非常感谢对AI Copilot的建议</p>
+        cnt: `<p</p>
         <list class="new">
-            <a class="a" onclick="window.open('https://github.com/tjy-gitnub/win12/issues','_blank');" win12_title="在浏览器新窗口打开链接" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)">在github上提交issue (需要github账户，会得到更高重视)</a>
-            <a class="a" onclick="window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__SDw7SZURjUzOUo0VEVXU1pMWlFTSUVGWDNYWU1EWS4u','_blank');" win12_title="在浏览器新窗口打开链接" onmouseenter="showdescp(event)" onmouseleave="hidedescp(event)">在Microsoft Forms上发送反馈(不需要账户，也会重视)</a>
         </list>
             `,
         btn: [
@@ -607,7 +597,7 @@ let nts = {
     'shutdown': {
         cnt: `
         <p class="tit">即将注销你的登录</p>
-        <p>Windows 将在 114514 分钟后关闭。</p>`,
+        <p>Windows 将在 1 分钟后关闭。</p>`,
         btn: [
             { type: 'main', text: '关闭', js: 'closenotice();' }
         ]
@@ -624,17 +614,10 @@ let nts = {
     },
     'recognition' : {
         cnt: `
-        <p class="tit">语音输入法使用须知</p>
-        <p>本语音输入法由@nb-group开发<br>
-        使用的语音识别api 仅可在使用 Chromium 内核的浏览器上使用，<br>
+        <p class="tit">视觉追踪&分析</p>
+        仅可在使用 Chromium 内核的浏览器上使用，<br>
         包括Microsoft Edge，Google Chrome等，<br>
-        api（理论上）完全离线.<br>
-        我们绝不会窃取您的输入信息，请放心使用。<br><br>
-        每次语音识别都会重新申请一下麦克风，这是浏览器的问题，<br>
-        可以在浏览器设置里选择始终允许。<br><br>
-        哦对了，关掉提示窗口之后再点一次语音球才能开始识别。
-        </p>
-         `,
+        </p>`,
         btn: [
             { type: 'main', text: '确定', js: 'closenotice();' },
         ]
@@ -798,88 +781,10 @@ let apps = {
             $('#win-setting>.menu>list>a.' + name).addClass('check');
         },
         theme_get: () => {
-            $('#set-theme').html(`<loading><svg width="30px" height="30px" viewBox="0 0 16 16">
-            <circle cx="8px" cy="8px" r="7px" style="stroke:#7f7f7f50;fill:none;stroke-width:3px;"></circle>
-            <circle cx="8px" cy="8px" r="7px" style="stroke:#2983cc;stroke-width:3px;"></circle></svg></loading>`)
-            // 实时获取主题
-            $.get('https://api.github.com/repos/tjy-gitnub/win12-theme/contents').then(cs => {
-                cs.forEach(c => {
-                    if (c.type == 'dir') {
-                        $.get(c.url).then(cnt => {
-                            $('#set-theme').html('');
-                            cnt.forEach(cn => {
-                                if (cn.name == 'theme.json') {
-                                    $.getJSON('https://tjy-gitnub.github.io/win12-theme/' + cn.path).then(inf => {
-                                        infjs = inf;
-                                        if ($('#set-theme>loading').length)
-                                            $('#set-theme').html('');
-                                        $('#set-theme').append(`<a class="a act" onclick="apps.setting.theme_set('${c.name}')" style="background-image:url('https://tjy-gitnub.github.io/win12-theme/${c.name}/view.jpg')">${c.name}</a>`);
-                                    })
-                                }
-                            })
-                        })
-                    }
-                });
-            });
         },
         theme_set: (infp) => {
-            $.get('https://api.github.com/repos/tjy-gitnub/win12-theme/contents/' + infp).then(cnt => {
-                console.log('https://api.github.com/repos/tjy-gitnub/win12-theme/contents/' + infp);
-                cnt.forEach(cn => {
-                    if (cn.name == 'theme.json') {
-                        $.getJSON('https://tjy-gitnub.github.io/win12-theme/' + cn.path).then(inf => {
-                            infjs = inf;
-                            cnt.forEach(fbg => {
-                                console.log(fbg, infjs);
-                                if (fbg.name == infjs.bg) {
-                                    $(':root').css('--bgul', `url('https://tjy-gitnub.github.io/win12-theme/${fbg.path}')`);
-                                    $(':root').css('--theme-1', infjs.color1);
-                                    $(':root').css('--theme-2', infjs.color2);
-                                    $(':root').css('--href', infjs.href);
-                                    // $('#set-theme').append(`<a class="a act" onclick="apps.setting.theme_set(\`(${inf})\`)" style="background-image:url('https://tjy-gitnub.github.io/win12-theme/${fbg.path}')">${c.name}</a>`);
-                                }
-                            })
-                        })
-                    }
-                })
-            })
         },
         checkUpdate: () => {
-            $('#win-setting>.page>.cnt.update>.lo>.update-main .notice')[0].innerText = '正在检查更新...';
-            $('#win-setting>.page>.cnt.update>.lo>.update-main .detail')[0].innerHTML = '&nbsp;';
-            $('#win-setting>.page>.cnt.update>.setting-list>.update-now').addClass('disabled');
-            $('#win-setting>.page>.cnt.update>.setting-list>.update-now>div>p:first-child')[0].innerText = '正在检查更新...';
-            $('#win-setting>.page>.cnt.update>.setting-list>.update-now>div>p:last-child')[0].innerHTML = '&nbsp;';
-            $('#win-setting>.page>.cnt.update>.lo>.update-main>div:last-child').addClass('disabled');
-            fetch('https://api.github.com/repos/tjy-gitnub/win12/commits').then(res => {
-                res.json().then(json => {
-                    const sha = localStorage.getItem('sha');
-                    if (sha != json[0].sha) {
-                        let msg = json[0].commit.message.split('\n\n')[0];
-                        if (msg.match(/v[0-9]*\.[0-9]*\.[0-9]*/)) {
-                            msg = msg.match(/v[0-9]*\.[0-9]*\.[0-9]*/)[0];
-                            window.setTimeout(() => {
-                                $('#win-setting>.page>.cnt.update>.lo>.update-main .notice')[0].innerText = 'Windows 12 有更新可用';
-                                $('#win-setting>.page>.cnt.update>.lo>.update-main .detail')[0].innerText = `目前最新版本: ${msg}`;
-                                $('#win-setting>.page>.cnt.update>.lo>.update-main>div:last-child').removeClass('disabled');
-                                $('#win-setting>.page>.cnt.update>.setting-list>.update-now>div>p:first-child')[0].innerText = '更新已就绪';
-                                $('#win-setting>.page>.cnt.update>.setting-list>.update-now>div>p:last-child')[0].innerText = msg;
-                                $('#win-setting>.page>.cnt.update>.setting-list>.update-now').removeClass('disabled');
-                            }, 6000);
-                        }
-                        else {
-                            window.setTimeout(() => {
-                                let da = new Date();
-                                $('#win-setting>.page>.cnt.update>.lo>.update-main .notice')[0].innerText = 'Windows 12 目前是最新版本';
-                                $('#win-setting>.page>.cnt.update>.lo>.update-main .detail')[0].innerText = `上次检查时间: ${da.getFullYear()}年${da.getMonth() + 1}月${da.getDate()}日，${da.getHours()}: ${da.getMinutes()}`;
-                                $('#win-setting>.page>.cnt.update>.lo>.update-main>div:last-child').removeClass('disabled');
-                                $('#win-setting>.page>.cnt.update>.setting-list>.update-now>div>p:first-child')[0].innerText = '无更新可用';
-                                $('#win-setting>.page>.cnt.update>.setting-list>.update-now>div>p:last-child')[0].innerText = 'Windows 12 目前是最新版本';
-                            }, 6000)
-                        }
-                    }
-                });
-            });
         }
     },
     run: {
@@ -2115,42 +2020,11 @@ let apps = {
         init: () => {
             $('#win-about>.about').addClass('show');
             $('#win-about>.update').removeClass('show');
-            if (!($('#contri').length > 1)) apps.about.get();
-            if (!($('#StarShow').html().includes('刷新'))) apps.about.get_star();
         },
         run_loading: (expr) => {
             $(expr).html(`<loading><svg width="30px" height="30px" viewBox="0 0 16 16">
             <circle cx="8px" cy="8px" r="7px" style="stroke:#7f7f7f50;fill:none;stroke-width:3px;"></circle>
             <circle cx="8px" cy="8px" r="7px" style="stroke:#2983cc;stroke-width:3px;"></circle></svg></loading>`);
-        },
-        get: () => {
-            apps.about.run_loading('#contri');
-            // 实时获取项目贡献者
-            $.get('https://api.github.com/repos/tjy-gitnub/win12/contributors').then(cs => {
-                setTimeout(() => {
-                    $('#contri').html('');
-                    cs.forEach(c => {
-                        $('#contri').append(`<a class="a" onclick="window.open('${c['html_url']}','_blank');"><p class="name">${c['login']}</p><p class="cbs">贡献：<span class="num">${c['contributions']}</span></p></a>`)
-                    });
-                    $('#contri').append(`<a class="button" onclick="apps.about.get()"><i class="bi bi-arrow-clockwise"></i> 刷新</a>`)
-                }, 200);
-            });
-        },
-        get_star: () => {
-            apps.about.run_loading('#StarShow')
-            const repoFullName = 'tjy-gitnub/win12';
-            fetch(`https://api.github.com/repos/${repoFullName}`)
-                .then(response => response.json())
-                .then(data => {
-                    setTimeout(() => {
-                        const starCount = data.stargazers_count;
-                        $('#StarShow').html('<div style="display: flex;"><p>&emsp;&emsp;Star 数量：' + starCount + ' (实时数据)</p>&emsp;<a class="button" onclick="apps.about.get_star()"><i class="bi bi-arrow-clockwise"></i> 刷新</a></div>')
-                    }, 200);
-                })
-                .catch(error => {
-                    console.error('获取star数量时出错：', error);
-                    $('#StarShow').html('<div style="display: flex;"><p>&emsp;&emsp;哎呀！出错了！</p>&emsp;<a class="button" onclick="apps.about.get_star()"><i class="bi bi-arrow-clockwise"></i> 重试</a></div>')
-                });
         }
     },
     notepad: {
@@ -3040,7 +2914,7 @@ let copilot = {
 let da = new Date();
 let date = `星期${['日', '一', '二', '三', '四', '五', '六'][da.getDay()]}, ${da.getFullYear()}年${(da.getMonth() + 1).toString().padStart(2, '0')}月${da.getDate().toString().padStart(2, '0')}日`
 $('#s-m-r>.row1>.tool>.date').text(date);
-$('.dock.date>.date').text(`${da.getFullYear()}/${(da.getMonth() + 1).toString().padStart(2, '0')}/${da.getDate().toString().padStart(2, '0')}`);
+$('.dock.date>.date').text(`${da.getFullYear()}-${(da.getMonth() + 1).toString().padStart(2, '0')}-${da.getDate().toString().padStart(2, '0')}`);
 $('#datebox>.tit>.date').text(date);
 function loadtime() {
     let d = new Date();
@@ -3916,21 +3790,6 @@ document.getElementsByTagName('body')[0].onload = function nupd() {
             w.insertAdjacentHTML('afterbegin', `<div class="resize-knob ${n}" onmousedown="resizewin(this.parentElement.parentElement, '${n}', this)"></div>`);
         }
     });
-    $.getJSON('https://tjy-gitnub.github.io/win12-theme/def.json').then(j=>{
-        if(j.sp){
-            $(':root').css('--bgul',j.bg);
-            if(j.spth){
-                $(':root').css('--theme-1',j.th1);
-                $(':root').css('--theme-2',j.th2);
-                $(':root').css('--href', j.href);
-            }
-            if(j.death){
-                $('html').css('filter','saturate(0)');
-            }
-        }
-    })
-    document.querySelector('.rainbow-container-main').setAttribute('style', 'display:' + (use_mic_voice ? 'block' : 'none')+ ';');
-    // loadlang();
 };
 
 let autoUpdate = true;

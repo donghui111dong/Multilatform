@@ -1,7 +1,7 @@
 {
-  "name": "Windows 12",
-  "short_name": "Windows 12",
-  "display": "standalone",
+  "name": "管理中心网页版",
+  "short_name": "管理中心",
+  "display": "管理中心",
   "start_url": "/win12/boot.html",
   "prefer_related_applications": true,
   "background_color": "#000",
