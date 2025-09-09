@@ -1450,7 +1450,6 @@ let apps = {
             return null;
         },
         load: () => {
-            $('#win-vscode')[0].insertAdjacentHTML('afterbegin', '<iframe src="https://github1s.com/" frameborder="0" style="width: 100%; height: 100%;" loading="lazy"></iframe>')
         }
     },
     bilibili: {
@@ -1458,7 +1457,6 @@ let apps = {
             return null;
         },
         load: () => {
-            $('#win-bilibili')[0].insertAdjacentHTML('afterbegin', '<iframe src="https://bilibili.com/" frameborder="0" style="width: 100%; height: 100%;" loading="lazy"></iframe>')
         }
     },
     defender: {
@@ -3820,27 +3818,22 @@ if (!location.href.match(/((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d|[1-9]\d|
     $('#loginback').css('opacity', '1');
     $('#loginback').css('display', 'flex');
     shownotice('about');
-    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none', scope: './' }).then(reg => {
+    // navigator.serviceWorker.register('sw.js', { updateViaCache: 'none', scope: './' }).then(reg => {
 
-        reg.update();
+    //     reg.update();
 
-        reg.addEventListener('updatefound', () => {
-            // 正在安装的新的 SW
-            const newWorker = reg.installing;
-            console.log('dsk-发现更新');
-            // newWorker.state;
-            // // "installing" - 安装事件被触发，但还没完成
-            // // "installed"  - 安装完成
-            // // "activating" - 激活事件被触发，但还没完成
-            // // "activated"  - 激活成功
-            // // "redundant"  - 废弃，可能是因为安装失败，或者是被一个新版本覆盖
-        });
-    });
-    // navigator.serviceWorker.controller.postMessage({
-    //     head: 'is_update'
+    //     reg.addEventListener('updatefound', () => {
+    //         // 正在安装的新的 SW
+    //         const newWorker = reg.installing;
+    //         console.log('dsk-发现更新');
+    //         // newWorker.state;
+    //         // // "installing" - 安装事件被触发，但还没完成
+    //         // // "installed"  - 安装完成
+    //         // // "activating" - 激活事件被触发，但还没完成
+    //         // // "activated"  - 激活成功
+    //         // // "redundant"  - 废弃，可能是因为安装失败，或者是被一个新版本覆盖
+    //     });
     // });
-    // navigator.serviceWorker.addEventListener('message', function (e) {
-    // checkUpdate();
 
     if (localStorage.getItem('autoUpdate') == 'true') {
         checkUpdate();
@@ -3862,6 +3855,8 @@ if (!location.href.match(/((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d|[1-9]\d|
         console.log('setData 被禁用');
     }
 }
+
+
 function sendToSw(msg) {
     navigator.serviceWorker.controller.postMessage(msg);
 }
