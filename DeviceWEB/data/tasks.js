@@ -32,6 +32,11 @@ let taskmgrTasks = [
         icon: 'icon/setting.svg',
         link: 'setting'
     },
+     {
+        name: '综控',
+        icon: 'icon/ZK.png',
+        link: 'zk'
+    },
     {
         name: 'Python Editor(Python程序编辑器)',
         icon: 'icon/pythonEditor.svg',

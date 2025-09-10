@@ -827,7 +827,7 @@
 			<img src="icon/computer.png">
 			<p>此电脑</p>
 		</div>
-		<div class="b" ondblclick="" oncontextmenu="return showcm(event,'desktop.icon',['setting',-1]);" appname="ZK">
+		<div class="b" ondblclick="openapp('zk');" oncontextmenu="return showcm(event,'desktop.icon',['setting',-1]);" appname="ZK">
 			<img src="icon/ZK.png">
 			<p>综控板</p>
 		</div>
@@ -2624,6 +2624,32 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div class="window zk">
+		<div class="resize-bar"></div>
+		<div class="titbar">
+			<img src="icon/ZK.png" class="icon">
+			<p>综控</p>
+			<div>
+				<a class="a wbtg red" onclick="hidewin('zk')"><i class="bi bi-x-lg"></i></a>
+				<a class="a wbtg max" onclick="maxwin('zk')"><i class="bi bi-app"></i></a>
+				<a class="a wbtg" onclick="minwin('zk')"><i class="bi bi-dash-lg"></i></a>
+			</div>
+		</div>
+		<div class="loadback">
+			<img src="icon/ZK.png" class="icon">
+		</div>
+		<div class="content" id="win-zk">
+			<div class="menu">
+				
+			</div>
+			<div class="page">
+				
+			</div>
+		</div>
+	</div>
+
 	<script src="data/tasks.js"></script>
 	<script src="desktop.js"></script>
 	<script src="module/tab.js"></script>

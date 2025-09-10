@@ -1,9 +1,11 @@
-// 后端服务器
-// loadlang();
+
 const server = '';
-const pages = {
-    'get-title': '', // 获取标题
+
+const pages = 
+{
+    'get-title': ''
 };
+
 //settings page list right hight light <span>       @Junchen Yi 
 document.querySelectorAll(`list.focs`).forEach(li => {
     li.addEventListener('click', e => {
@@ -2573,6 +2575,11 @@ Microsoft Windows [版本 12.0.39035.7324]
         init: () => {
             null
         }
+    },
+    zk: {
+        init: () => {
+            null
+        }
     }
 }
 
@@ -3792,18 +3799,18 @@ document.getElementsByTagName('body')[0].onload = function nupd() {
 
 let autoUpdate = true;
 function checkUpdate() {
-    const sha = localStorage.getItem('sha');
-    fetch('https://api.github.com/repos/tjy-gitnub/win12/commits').then(res => {
-        res.json().then(json => {
-            if (sha != json[0].sha && sha) {
-                localStorage.setItem('update', true);
-                sendToSw({
-                    head: 'update'
-                });
-            }
-            localStorage.setItem('sha', json[0].sha);
-        });
-    });
+    // const sha = localStorage.getItem('sha');
+    // fetch('https://api.github.com/repos/tjy-gitnub/win12/commits').then(res => {
+    //     res.json().then(json => {
+    //         if (sha != json[0].sha && sha) {
+    //             localStorage.setItem('update', true);
+    //             sendToSw({
+    //                 head: 'update'
+    //             });
+    //         }
+    //         localStorage.setItem('sha', json[0].sha);
+    //     });
+    // });
 }
 
 if (localStorage.getItem('autoUpdate') == undefined) {
@@ -3818,23 +3825,6 @@ if (!location.href.match(/((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d|[1-9]\d|
     $('#loginback').css('opacity', '1');
     $('#loginback').css('display', 'flex');
     shownotice('about');
-    // navigator.serviceWorker.register('sw.js', { updateViaCache: 'none', scope: './' }).then(reg => {
-
-    //     reg.update();
-
-    //     reg.addEventListener('updatefound', () => {
-    //         // 正在安装的新的 SW
-    //         const newWorker = reg.installing;
-    //         console.log('dsk-发现更新');
-    //         // newWorker.state;
-    //         // // "installing" - 安装事件被触发，但还没完成
-    //         // // "installed"  - 安装完成
-    //         // // "activating" - 激活事件被触发，但还没完成
-    //         // // "activated"  - 激活成功
-    //         // // "redundant"  - 废弃，可能是因为安装失败，或者是被一个新版本覆盖
-    //     });
-    // });
-
     if (localStorage.getItem('autoUpdate') == 'true') {
         checkUpdate();
     }
